@@ -18,4 +18,10 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	FGameplayAttributeData Health;
 	ATTRIBUTE_ACCESSORS(UVitalAttributeSet, Health)
+
+	UPROPERTY(BlueprintReadOnly)
+	FGameplayAttributeData MaxHealth;
+	ATTRIBUTE_ACCESSORS(UVitalAttributeSet, MaxHealth)
+
+	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 };
